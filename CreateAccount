@@ -1,0 +1,56 @@
+class CreateAccount {
+	public static void Account(String[] args) { // This is the function that will allow people to either log in to their current account or they will be able to create a new account.
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Do you have an account? If so, enter in 1 to log-in. \n If you need to create an account, enter 2 to create an account.");
+		if (input == 1)
+		System.out.println(Login);
+		// The purpose of this if statement is to ask the user to input different numbers that would lead them into either the Log in or create a new account with the details below. 
+		else (input == 2)
+		System.out.println(CreateAccount);
+		
+	}
+	
+	public static void CreateAccount(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter in a users ID. ");
+		String userID = input.nextLine();
+		System.out.println();
+		
+		System.out.println("Enter in password that you've selected. ");
+		String password = input.nextLine();
+		System.out.println();
+		
+		System.out.println("Enter in your name. ");
+		String name = input.nextLine();
+		System.out.println();
+		
+		System.out.println("Enter in your address. ");
+		String address = input.nextLine();
+		System.out.println();
+		
+		System.out.println("Enter in your phone number. ");
+		String phoneNumber = input.nextLine();
+		System.out.println();
+		
+		System.out.println("Enter in your Credit Card number. ");
+		String cC = input.nextLine();
+		System.out.println(); 
+		
+		//Here I will need to input all this data collected from the previous input statements and save them on a seperate txt file. 
+		
+		System.out.println("Enter in 'log_out' if you want to log out of this program. ");
+		if (input == log_out)
+		break;
+		
+	public static void Login(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("To log in, you need to enter in your username and ID #. ");
+		String login = input.nextLine();
+		System.out.println();
+
+	}
+}
+
+}
