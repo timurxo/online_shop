@@ -1,0 +1,79 @@
+package final_project;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+/*
+1. Customer requests to browse catalog.
+2. System displays catalog information to customer.
+3. Customer selects one or more items from catalog.
+4. System adds the selected items to a cart. 
+
+Alternative sequence:
+Step 3: Customer does not select item and exits.
+Step 5: Customer does not add the items to a cart and exits. 
+
+ */
+public class SelectItems {
+	
+	public static void main(String[] args) 
+	{
+        Scanner sc = new Scanner(System.in); 
+        
+        ArrayList<String> items = new ArrayList<String>();
+
+
+        // ITEMS LIST          
+        String ite[] = {"TV", "PS4", "Xbox"};
+        int price[] = {1700, 400, 300};
+        
+        for (int i=1; i<4; i++)
+        {
+        	System.out.println(i + ". " + ite[i-1] + " - $" + price[i-1]);
+        }
+           
+        
+        // Ask to make the first choice	
+		System.out.println("Select an item by entering it's number: ");
+        String choice = sc.nextLine(); 
+        items.add(choice);
+        
+   
+        // if no choice is made
+        if (choice.isEmpty())
+        {
+    		System.out.println("Please make a selection: ");
+            String ch = sc.nextLine(); 
+            items.add(ch);
+    		
+        }
+
+      
+        
+        // keep asking for selection of other items
+		while (true)
+		{
+			System.out.println("Do you need something else? (yes/no)");
+
+	        String yn = sc.nextLine(); 
+	        
+	        if (yn.equals("yes"))
+	        {
+	    		System.out.println("Select an item by entering it's number ");
+	            String choice2 = sc.nextLine(); 
+	            items.add(choice2);
+	        }
+	        else if (yn.equals("no"))
+	        {   
+	        	if (items.equals("1"))
+	        		items = ite;
+	        	
+	        	System.out.println("You've chosen: " + items);
+	        	break;
+	        }
+		
+	        
+	     }
+	
+	}
+}
