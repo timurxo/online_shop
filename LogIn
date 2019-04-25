@@ -1,0 +1,32 @@
+package final_project;
+
+/*
+1. Customer enters id and password.
+2. System checks if customer id and password are correct.
+3. System displays a welcome message if id and password are correct. 
+
+ If customer’s ID does not exist in the system, system displays that there is no account.
+ 
+ */
+import java.util.Scanner; 
+
+
+public class LogIn {
+	
+	
+
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in); 
+        
+        // Ask for ID
+        System.out.println("Enter your ID: ");
+        String id = sc.nextLine(); 
+
+        // Ask for password
+        System.out.println("Enter your password: ");
+        String password = sc.nextLine();  
+
+    }
+	
+}
