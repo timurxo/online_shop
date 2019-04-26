@@ -65,8 +65,8 @@ public class SelectItems {
 	        }
 	        else if (yn.equals("no"))
 	        {   
-	        	if (items.equals("1"))
-	        		items = ite;
+	        	//if (items.equals("1"))
+	        	//	items = ite;
 	        	
 	        	System.out.println("You've chosen: " + items);
 	        	break;
